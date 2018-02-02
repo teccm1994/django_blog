@@ -1,18 +1,52 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from datetime import datetime
 from django.http import Http404
+from datetime import timezone
+import datetime
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Article
 
 # Create your views here.
 def home(request):
-    post_list = Article.objects.all()
+    posts = Article.objects.all()
+    paginator = Paginator(posts, 1)
+    page = request.GET.get('page')
+    try:
+        post_list = paginator.page(page)
+    except PageNotAnInteger:
+        post_list = paginator.page(1)
+    except EmptyPage:
+        post_list = paginator.paginator(paginator.num_pages)
     return render(request, 'article/home.html', {'post_list': post_list})
 
 def detail(request, article_id):
     post = Article.objects.get(pk=article_id)
     return render(request, 'article/detail.html', {'post': post})
+
+def archives(request, article_id) :
+    try:
+        post_list = Article.objects.get(pk=article_id)
+    except Article.DoesNotExist:
+        raise Http404
+    return render(request, 'article/archives.html', {'post_list': post_list,
+                                             'error': False})
+
+def blog_search(request):
+    if 's' in request.GET:
+        s = request.GET['s']
+        if not s:
+            return render(request,'article/home.html')
+        else:
+            post_list = Article.objects.filter(title__icontains=s)
+            if len(post_list) == 0 :
+                return render(request,'article/archives.html', {'post_list' : post_list,
+                                                    'error' : True})
+            else:
+                return render(request,'article/archives.html', {'post_list' : post_list,
+                                                    'error' : False})
+    return redirect('/')
 
 def test(request):
     return render(request, 'article/test.html', {'current_time': datetime.now()})
