@@ -6,10 +6,12 @@ from datetime import timezone
 import datetime
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.mail import send_mail
+import logging
 
 from .models import Article
 
 # Create your views here.
+logger = logging.getLogger(__name__)
 def home(request):
     posts = Article.objects.all()
     paginator = Paginator(posts, 2)
@@ -20,6 +22,7 @@ def home(request):
         post_list = paginator.page(1)
     except EmptyPage:
         post_list = paginator.paginator(paginator.num_pages)
+    logger.debug("paginator has executed!")
     return render(request, 'article/home.html', {'post_list': post_list})
 
 def detail(request, article_id):
@@ -38,6 +41,7 @@ def blog_search(request):
     if 's' in request.GET:
         s = request.GET['s']
         if not s:
+            logger.info("s is not exist!")
             return render(request,'article/home.html')
         else:
             post_list = Article.objects.filter(title__icontains=s)
@@ -52,6 +56,7 @@ def blog_search(request):
 def email_send(request):
     send_mail('Subject here', 'Here is the message.', 'campus@xjgreat.com',
               ['data_monitor_services@xjgreat.com'], fail_silently=False)
+    logger.debug("email has send!")
     return render(request, 'article/email_send.html')
 
 def test(request):
