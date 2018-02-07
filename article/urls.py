@@ -10,4 +10,6 @@ urlpatterns = [
     path('', views.test, name='test'),
     path('<int:article_id>/', views.archives, name='archives'),
     path('search/', views.blog_search),
+    # path('', views.email_send, name='email_send')
+    path('email/', views.email_send)
 ]

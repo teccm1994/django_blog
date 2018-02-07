@@ -5,13 +5,14 @@ from django.http import Http404
 from datetime import timezone
 import datetime
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.mail import send_mail
 
 from .models import Article
 
 # Create your views here.
 def home(request):
     posts = Article.objects.all()
-    paginator = Paginator(posts, 1)
+    paginator = Paginator(posts, 2)
     page = request.GET.get('page')
     try:
         post_list = paginator.page(page)
@@ -47,6 +48,11 @@ def blog_search(request):
                 return render(request,'article/archives.html', {'post_list' : post_list,
                                                     'error' : False})
     return redirect('/')
+
+def email_send(request):
+    send_mail('Subject here', 'Here is the message.', 'campus@xjgreat.com',
+              ['data_monitor_services@xjgreat.com'], fail_silently=False)
+    return render(request, 'article/email_send.html')
 
 def test(request):
     return render(request, 'article/test.html', {'current_time': datetime.now()})
