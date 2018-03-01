@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bc44041-69ce-4c7a-bf4c-7bc369432111" name="Default" comment="新增登录页面">
-      <change beforePath="" afterPath="$PROJECT_DIR$/article/templates/article/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login/forms.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login/templates/base.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login/templates/login/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login/templates/login/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/login/templates/login/register.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7-dist/js/npm.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/login.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-3.3.1.min.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/my_blog.iml" afterPath="$PROJECT_DIR$/.idea/my_blog.iml" />
+    <list default="true" id="2bc44041-69ce-4c7a-bf4c-7bc369432111" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/article/urls.py" afterPath="$PROJECT_DIR$/article/urls.py" />
-      <change beforePath="$PROJECT_DIR$/article/views.py" afterPath="$PROJECT_DIR$/article/views.py" />
-      <change beforePath="$PROJECT_DIR$/my_blog/settings.py" afterPath="$PROJECT_DIR$/my_blog/settings.py" />
-      <change beforePath="$PROJECT_DIR$/my_blog/urls.py" afterPath="$PROJECT_DIR$/my_blog/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -122,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-868">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -258,16 +228,6 @@
             <path>
               <item name="my_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_blog" type="462c0819:PsiDirectoryNode" />
               <item name="my_blog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -378,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517986956381</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="新增登录页面">
+      <created>1519869802701</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519869802701</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -392,14 +359,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="824" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16237482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -792,7 +758,7 @@
     <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-868">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
