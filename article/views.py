@@ -7,11 +7,32 @@ import datetime
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.mail import send_mail
 import logging
+from django.contrib.auth import authenticate, login, logout
 
 from .models import Article
 
 # Create your views here.
 logger = logging.getLogger(__name__)
+# def login(request):
+#     nowtime = datetime.now().strftime("%Y-%m-%d %H:%M:%S", datetime.now().localtime())
+#     if request.method == 'GET':
+#         return render(request, 'article/login.html', {'reason': "invalid login",'nowtime': nowtime})
+#     else:
+#         username = request.POST['username']
+#         password = request.POST['password']
+#         user = authenticate(username=username, password=password)
+#         if user is not None:
+#             if user.is_active:
+#                 login(request, user)
+#             else:
+#                 return render(request, 'article/login.html', {'reason': "disable account"})
+#         else:
+#             return render(request, 'article/login.html', {'reason': "invalid login"})
+
+# def logout_view(request):
+#     logout(request)
+#     return render(request, 'article/login.html', {'reason': "logout success"})
+
 def home(request):
     posts = Article.objects.all()
     paginator = Paginator(posts, 2)
@@ -34,8 +55,7 @@ def archives(request, article_id) :
         post_list = Article.objects.get(pk=article_id)
     except Article.DoesNotExist:
         raise Http404
-    return render(request, 'article/archives.html', {'post_list': post_list,
-                                             'error': False})
+    return render(request, 'article/archives.html', {'post_list': post_list, 'error': False})
 
 def blog_search(request):
     if 's' in request.GET:

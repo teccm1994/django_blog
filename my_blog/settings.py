@@ -32,13 +32,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'article.apps.ArticleConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'article.apps.ArticleConfig',
+    'login',
 ]
 
 
@@ -124,3 +125,31 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# send email
+EMAIL_HOST = 'smtp.exmail.qq.com'
+EMAIL_HOST_USER = 'campus@xjgreat.com'
+EMAIL_HOST_PASSWORD = 'jmivSKtjy27rDrq3'
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True
+
+# print logging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'DEBUG' if DEBUG else 'INFO',
+        },
+    },
+}
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
