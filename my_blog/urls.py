@@ -25,4 +25,5 @@ urlpatterns = [
     path('logout/', views.logout),
     path('article/', include('article.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('captcha/', include('captcha.urls')),
 ]
