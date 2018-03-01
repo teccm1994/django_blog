@@ -134,6 +134,9 @@ EMAIL_HOST_PASSWORD = 'jmivSKtjy27rDrq3'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
 
+# 注册有效期天数
+CONFIRM_DAYS = 7
+
 # print logging
 LOGGING = {
     'version': 1,

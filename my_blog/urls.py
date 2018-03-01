@@ -26,4 +26,5 @@ urlpatterns = [
     path('article/', include('article.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('captcha/', include('captcha.urls')),
+    path('confirm/', views.user_confirm)
 ]

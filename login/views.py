@@ -1,9 +1,46 @@
 from django.shortcuts import render, redirect
-from login.models import User
+from login.models import User, ConfirmString
 from .forms import UserForm, RegisterForm
 import hashlib
+import datetime
+import pytz
+from django.conf import settings
 
 # Create your views here.
+utc=pytz.UTC
+
+def hash_code(s, salt='my_blog'):# 加点盐
+    h = hashlib.sha256()
+    s += salt
+    h.update(s.encode())  # update方法只接收bytes类型
+    return h.hexdigest()
+
+def make_confirm_string(user):
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    code = hash_code(user.name, now)
+    ConfirmString.objects.create(code=code, user=user)
+    return code
+
+def send_email(email, code):
+
+    from django.core.mail import EmailMultiAlternatives
+
+    subject = '来自my_blog的注册确认邮件'
+
+    text_content = '''感谢注册my_blog，这里专注于Python和Django技术的分享！\
+                    如果你看到这条消息，说明你的邮箱服务器不提供HTML链接功能，请联系管理员！'''
+
+    html_content = '''
+                    <p>感谢注册<a href="http://{}/confirm/?code={}" target=blank>my_blog</a>，\
+                    这里专注于Python和Django技术的分享！</p>
+                    <p>请点击站点链接完成注册确认！</p>
+                    <p>此链接有效期为{}天！</p>
+                    '''.format('127.0.0.1:8000', code, settings.CONFIRM_DAYS)
+
+    msg = EmailMultiAlternatives(subject, text_content, settings.EMAIL_HOST_USER, [email])
+    msg.attach_alternative(html_content, "text/html")
+    msg.send()
+
 def index(request):
     pass
     return render(request, 'login/index.html')
@@ -19,6 +56,9 @@ def login(request):
             password = login_form.cleaned_data['password']
             try:
                 user = User.objects.get(name=username)
+                if not user.has_confirmed:
+                    message = "该用户还未通过邮件确认！"
+                    return render(request, 'login/login.html', locals())
                 if user.password == hash_code(password):
                     request.session['is_login'] = True
                     request.session['user_id'] = user.id
@@ -67,7 +107,12 @@ def register(request):
                 new_user.email = email
                 new_user.sex = sex
                 new_user.save()
-                return redirect('/login/')  # 自动跳转到登录页面
+
+                code = make_confirm_string(new_user)
+                send_email(email, code)
+
+            message = '请前往注册邮箱，进行邮件确认！'
+            return render(request, 'login/confirm.html', locals())  # 跳转到等待邮件确认页面。
     register_form = RegisterForm()
     return render(request, 'login/register.html', locals())
 
@@ -82,8 +127,26 @@ def logout(request):
     # del request.session['user_name']
     return redirect("/index/")
 
-def hash_code(s, salt='my_blog'):# 加点盐
-    h = hashlib.sha256()
-    s += salt
-    h.update(s.encode())  # update方法只接收bytes类型
-    return h.hexdigest()
+def user_confirm(request):
+    code = request.GET.get('code', None)
+    message = ''
+    try:
+        confirm = ConfirmString.objects.get(code=code)
+    except:
+        message = '无效的确认请求!'
+        return render(request, 'login/confirm.html', locals())
+
+    c_time = confirm.created_time
+    now = utc.localize(datetime.datetime.now())
+    if now > c_time + datetime.timedelta(settings.CONFIRM_DAYS):
+        confirm.user.delete()
+        message = '您的邮件已经过期！请重新注册!'
+        return render(request, 'login/confirm.html', locals())
+    else:
+        confirm.user.has_confirmed = True
+        confirm.user.save()
+        confirm.delete()
+        message = '感谢确认，请使用账户登录！'
+        return render(request, 'login/confirm.html', locals())
+
+
