@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bc44041-69ce-4c7a-bf4c-7bc369432111" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/login/forms.py" afterPath="$PROJECT_DIR$/login/forms.py" />
-      <change beforePath="$PROJECT_DIR$/login/templates/login/login.html" afterPath="$PROJECT_DIR$/login/templates/login/login.html" />
-      <change beforePath="$PROJECT_DIR$/my_blog/settings.py" afterPath="$PROJECT_DIR$/my_blog/settings.py" />
-      <change beforePath="$PROJECT_DIR$/my_blog/urls.py" afterPath="$PROJECT_DIR$/my_blog/urls.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/login/templates/base.html" afterPath="$PROJECT_DIR$/login/templates/base.html" />
+      <change beforePath="$PROJECT_DIR$/login/templates/login/index.html" afterPath="$PROJECT_DIR$/login/templates/login/index.html" />
+      <change beforePath="$PROJECT_DIR$/login/views.py" afterPath="$PROJECT_DIR$/login/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +34,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="366">
+              <caret line="48" column="30" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -55,21 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/templates/login/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="119">
+              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login/templates/login/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="176">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -98,8 +98,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="345">
+              <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -118,8 +118,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+            <state relative-caret-position="66">
+              <caret line="3" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -170,14 +170,14 @@
         <option value="$PROJECT_DIR$/article/admin.py" />
         <option value="$PROJECT_DIR$/login/admin.py" />
         <option value="$PROJECT_DIR$/login/templates/login/register.html" />
-        <option value="$PROJECT_DIR$/login/templates/base.html" />
         <option value="$PROJECT_DIR$/static/css/login.css" />
-        <option value="$PROJECT_DIR$/login/templates/login/index.html" />
-        <option value="$PROJECT_DIR$/login/views.py" />
         <option value="$PROJECT_DIR$/my_blog/settings.py" />
         <option value="$PROJECT_DIR$/my_blog/urls.py" />
         <option value="$PROJECT_DIR$/login/forms.py" />
         <option value="$PROJECT_DIR$/login/templates/login/login.html" />
+        <option value="$PROJECT_DIR$/login/views.py" />
+        <option value="$PROJECT_DIR$/login/templates/base.html" />
+        <option value="$PROJECT_DIR$/login/templates/login/index.html" />
       </list>
     </option>
   </component>
@@ -235,6 +235,19 @@
             <path>
               <item name="my_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -357,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519869802701</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="新增登录图形验证">
+      <created>1519871922218</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1519871922218</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -430,7 +450,8 @@
     <MESSAGE value="新增邮件发送功能" />
     <MESSAGE value="logging" />
     <MESSAGE value="新增登录页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增登录页面" />
+    <MESSAGE value="新增登录图形验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增登录图形验证" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -726,26 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/templates/login/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -762,24 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -806,8 +793,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login/templates/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="119">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="48" column="30" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/templates/login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="14" />
           <folding />
         </state>
       </provider>
